@@ -21,9 +21,7 @@ function BowlingList() {
       <table className="table table-bordered">
         <thead>
           <tr>
-            <th>Bowler First Name</th>
-            <th>Bowler Last Name</th>
-            <th>Middle Initial</th>
+            <th>Bowler Name</th>
             <th>Address</th>
             <th>City</th>
             <th>State</th>
@@ -35,9 +33,9 @@ function BowlingList() {
         <tbody>
           {bowlerData.map((f) => (
             <tr key={f.bowlerId}>
-              <td>{f.bowlerFirstName}</td>
-              <td>{f.bowlerLastName}</td>
-              <td>{f.bowlerMiddleInit}</td>
+              <td>
+                <td>{`${f.bowlerFirstName} ${f.bowlerMiddleInit ? f.bowlerMiddleInit + '. ' : ''}${f.bowlerLastName}`}</td>
+              </td>
               <td>{f.bowlerAddress}</td>
               <td>{f.bowlerCity}</td>
               <td>{f.bowlerState}</td>
